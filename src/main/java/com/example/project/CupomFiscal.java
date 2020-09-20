@@ -17,13 +17,11 @@ public class CupomFiscal {
 
 	public static void imprimir_dados(){
 		if(NOME_LOJA.isEmpty()) {
-			System.out.printf("O campo nome da loja é obrigatório");
-			return;
+			throw new RuntimeException("O campo nome da loja é obrigatório");
 		}
 
 		if (LOGRADOURO.isEmpty()) {
-			System.out.printf("O campo logradouro do endereço é obrigatório");
-			return;
+			throw new RuntimeException("O campo logradouro do endereço é obrigatório");
 		}
 
 		String _logradouro = LOGRADOURO + ", ";
