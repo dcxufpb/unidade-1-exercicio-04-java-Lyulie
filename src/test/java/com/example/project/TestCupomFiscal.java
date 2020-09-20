@@ -104,21 +104,29 @@ public class TestCupomFiscal {
 	@Test
 	public void exercicio02_Customizado() {
 		//Defina seus próprios valores para as variáveis a seguir 
-		CupomFiscal.NOME_LOJA = "";
-		CupomFiscal.LOGRADOURO = "";
+		CupomFiscal.NOME_LOJA = "Andrea Docas";
+		CupomFiscal.LOGRADOURO = "Rua Setorial";
 		CupomFiscal.NUMERO = 0;
-		CupomFiscal.COMPLEMENTO = "";
-		CupomFiscal.BAIRRO = "";
-		CupomFiscal.MUNICIPIO = "";
-		CupomFiscal.ESTADO = "";
-		CupomFiscal.CEP = "";
-		CupomFiscal.TELEFONE = "";
-		CupomFiscal.OBSERVACAO = "";
-		CupomFiscal.CNPJ = "";
-		CupomFiscal.INSCRICAO_ESTADUAL = "";
+		CupomFiscal.COMPLEMENTO = "Próximo ao forte";
+		CupomFiscal.BAIRRO = "Camboriu";
+		CupomFiscal.MUNICIPIO = "Cabedelo";
+		CupomFiscal.ESTADO = "PB";
+		CupomFiscal.CEP = "58038-000";
+		CupomFiscal.TELEFONE = "(83) 8888-7777";
+		CupomFiscal.OBSERVACAO = "Entrada Km 7";
+		CupomFiscal.CNPJ = "42.591.651/0797-34";
+		CupomFiscal.INSCRICAO_ESTADUAL = "244.898.500.113";
 		
 		//E atualize o texto esperado abaixo
-		rodarTestarOutput("" + BREAK);
+		rodarTestarOutput(
+			"Andrea Docas" + BREAK +
+			"Rua Setorial, s/n Próximo ao forte" + BREAK +
+			"Camboriu - Cabedelo - PB" + BREAK +
+			"CEP:58038-000 Tel (83) 8888-7777" + BREAK +
+			"Entrada Km 7" + BREAK +
+			"CNPJ: 42.591.651/0797-34" + BREAK +
+			"IE: 244.898.500.113" + BREAK
+		);
 	}
 
 	private void rodarTestarOutput(String expected) {
